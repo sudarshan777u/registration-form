@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ 
+    .registration-form {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    
+    .form-column {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    /* Style for additional skills and experience */
+    #skillsExperienceContainer {
+        margin-top: 15px;
+    }
+    
+    /* Optional: Apply some responsive styles */
+    @media (max-width: 768px) {
+        .form-row {
+            flex-direction: column;
+        }
+        .form-column {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    </style>
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="POST">
+                {% csrf_token %}
+        
+                <!-- Personal Information -->
+                <h3>Personal Details</h3>
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Contact Information -->
+                
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="mobile">Mobile:</label>
+                            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Address Information -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="postalcode">Postal Code:</label>
+                            <input type="text" id="postalcode" name="postal_code" placeholder="Enter your postal code" required>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Education Information -->
+                <h3>Education Details</h3>
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="highestqualification">Highest Qualification:</label>
+                            <input type="text" id="highestqualification" name="highest_qualification" placeholder="Enter your qualification">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="percentage">Percentage:</label>
+                            <input type="text" id="percentage" name="percentage" placeholder="Enter your percentage">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="college">College:</label>
+                            <input type="text" id="college" name="college" placeholder="Enter your college">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="yearofpassing">Year of Passing:</label>
+                            <input type="text" id="yearofpassing" name="year_of_passing" placeholder="Enter your year of passing">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Additional Information -->
+                <h3>Preffessional Details</h3>
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="course">Course:</label>
+                            <input type="text" id="course" name="course" placeholder="Enter your course">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="certifications">Certifications:</label>
+                            <input type="file" id="certifications" name="certifications" placeholder="Upload certifications">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Skills and Experience -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="skills">Skills:</label>
+                            <input type="text" id="skills" name="skills" placeholder="Enter your skills">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="experience">Experience:</label>
+                            <input type="number" id="experience" name="experience" placeholder="Enter your experience">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Additional Skills and Experience -->
+                <div id="skillsExperienceContainer"></div><br>
+                <button type="button" onclick="addSkillsExperience()">Add Skills</button><br>
+             <button type="submit">submit</button>
+            </form>
+        </div>
+
+</head>
+
+        
+        
+        
+    <script>
+     
+    </script>
+
+    
+
+</body>
+</html>
+
+
+
+
+
+
